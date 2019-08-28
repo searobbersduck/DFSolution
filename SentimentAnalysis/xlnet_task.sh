@@ -1,10 +1,11 @@
 CUDA_VISIBLE_DEVICES=0,1,2,3 python sentiment_analysis_with_xlnet.py \
   --do_train=True \
-  --do_eval=False \
+  --do_eval=True \
   --do_predict=True \
   --task_name=sentiment \
   --data_dir=./data/ \
   --output_dir=./xlnet_output \
+  --predict_dir=./xlnet_output \
   --model_dir=./model/ \
   --uncased=False \
   --spiece_model_file=./model/spiece.model \
