@@ -418,10 +418,10 @@ class SentimentDataPrecessor(DataProcessor):
             if (set_type != 'test') and (row['content'] == '' or row['label'] is None or type(row['content']) is float):
                 continue
             if set_type == 'test':
-                text_a = tokenization.convert_to_unicode(row['content'])
+                text_a = str(row['content'])
                 label = str(0)
             else:
-                text_a = tokenization.convert_to_unicode(row['content'])
+                text_a = str(row['content'])
                 label = str(row['label'])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
