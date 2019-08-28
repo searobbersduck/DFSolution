@@ -399,11 +399,12 @@ class SentimentDataPrecessor(DataProcessor):
             guid = "%s-%s" % (set_type, i)
             if (set_type != 'test') and (row['title'] == '' or row['label'] is None or type(row['title']) is float):
                 continue
+            txt = row['title'] + ' ' + row['content']
             if set_type == 'test':
-                text_a = tokenization.convert_to_unicode(row['title'])
+                text_a = tokenization.convert_to_unicode(txt)
                 label = str(0)
             else:
-                text_a = tokenization.convert_to_unicode(row['title'])
+                text_a = tokenization.convert_to_unicode(txt)
                 label = str(row['label'])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
