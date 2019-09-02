@@ -405,7 +405,7 @@ class SentimentDataPrecessor(DataProcessor):
                 label = str(0)
             else:
                 text_a = tokenization.convert_to_unicode(txt)
-                label = str(row['label'])
+                label = str(row['flag'])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
         return examples
