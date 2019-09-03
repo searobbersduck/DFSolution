@@ -12,3 +12,8 @@
 
 运行`./train.sh`， `--max_sequence_length=256`, `epoch=6`
 结果`0.87027210`
+
+---
+
+运行`./train.sh`， `--max_sequence_length=256`, `epoch=9`
+结果`0.88324535`
