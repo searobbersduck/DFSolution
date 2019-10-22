@@ -5,3 +5,4 @@ FinancialEntitiesRecognition/data
 CommentForAutomobile/data
 CloudImageRecognition/data
 Untitled*.ipynb
+__pycache__
